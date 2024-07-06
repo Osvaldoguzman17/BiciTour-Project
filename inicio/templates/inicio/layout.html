@@ -11,19 +11,21 @@
 </head>
 <body>
     <!-- Navegación superior -->
-    <div class="top-nav">
-        <div class="logo">BiciTour</div>
-        <!-- Agrega el formulario de búsqueda aquí -->
-        <form class="d-flex mx-4" method="GET" action="{% url 'search' %}">
-            <input class="form-control me-2" type="search" name="query" placeholder="Buscar rutas" aria-label="Buscar" value="{{ request.GET.query }}">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-        <div class="auth-buttons">
-            <a href="{% url 'Login' %}"><button>Iniciar Sesión</button></a>
-            <a href="{% url 'Registrar' %}"><button>Registrar</button></a>
+    <header>
+        <div class="top-nav">
+            <div class="logo">BiciTour</div>
+            <!-- Agrega el formulario de búsqueda aquí -->
+            <form class="d-flex mx-4" method="GET" action="{% url 'search' %}">
+                <input class="form-control me-2" type="search" name="query" placeholder="Buscar rutas" aria-label="Buscar" value="{{ request.GET.query }}">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <div class="auth-buttons">
+                <a href="{% url 'Login' %}"><button>Iniciar Sesión</button></a>
+                <a href="{% url 'Registrar' %}"><button>Registrar</button></a>
+            </div>
         </div>
-    </div>
-
+    </header>
+    
     <!-- Navegación principal -->
     <div class="main-nav">
         <ul>
@@ -44,5 +46,7 @@
     <main>
         {% block contenido %}{% endblock %}
     </main>
+
+    <script src="{% static 'inicio/js/script.js' %}"></script>
 </body>
 </html>
