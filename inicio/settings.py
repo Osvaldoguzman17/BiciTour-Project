@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'BiciTour.urls'
+ROOT_URLCONF = 'inicio.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'BiciTour.wsgi.application'
+WSGI_APPLICATION = 'inicio.wsgi.application'
 
 
 # Database
