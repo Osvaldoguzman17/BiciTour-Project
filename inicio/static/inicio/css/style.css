@@ -15,7 +15,6 @@ body {
 /* Navegación superior */
 .top-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #5271FF;
     padding: 10px 20px;
@@ -25,6 +24,34 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     color: #FFFFFF;
+    flex-grow: 1; /* Permite que el logo ocupe el espacio disponible */
+}
+
+/* Estilo para el formulario de búsqueda */
+.top-nav form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 20px; /* Espacio a los lados del formulario */
+}
+
+.top-nav .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.top-nav .btn-outline-success {
+    border: 1px solid #82E800;
+    color: #82E800;
+}
+
+.top-nav .btn-outline-success:hover {
+    background-color: #82E800;
+    color: #ffffff;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
 }
 
 .auth-buttons button {
@@ -32,7 +59,6 @@ body {
     border: none;
     color: #000000;
     padding: 10px 20px;
-    margin-left: 10px;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
 }
@@ -45,12 +71,14 @@ body {
 .main-nav {
     background-color: #FFFFFF;
     padding: 10px 20px;
+    border-bottom: 1px solid #d1d1d1; /* Añadido para una línea de separación sutil */
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente */
     margin: 0;
     padding: 0;
 }
@@ -60,16 +88,6 @@ body {
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-}
-
-main {
-    padding: 20px;
-    text-align: left;
-}
-
-h1 {
-    font-family: 'Playfair Display', serif;
-    color: #5271FF;
 }
 
 .main-nav .dropdown {
@@ -110,6 +128,11 @@ h1 {
     font-weight: 500;
 }
 
+/* Ajustes para el contenido principal */
+form {
+    margin: 0;
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -123,4 +146,9 @@ h1 {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
+}
+
+.card-img-top.ruta-imagen {
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
 }

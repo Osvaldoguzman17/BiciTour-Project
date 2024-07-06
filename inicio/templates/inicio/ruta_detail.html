@@ -1,0 +1,15 @@
+<!-- templates/inicio/ruta_detail.html -->
+{% extends "inicio/layout.html" %}
+
+{% block titulo %}Detalles de la Ruta{% endblock %}
+
+{% block contenido %}
+<div class="form-container">
+    <div class="card">
+        <h3>{{ ruta.nombre }}</h3>
+        <p><strong>Descripción:</strong> {{ ruta.descripcion }}</p>
+        <p><strong>Duración:</strong> {{ ruta.duracion }}</p>
+        <p><strong>Distancia:</strong> {{ ruta.distancia }} km</p>
+    </div>
+</div>
+{% endblock %}
