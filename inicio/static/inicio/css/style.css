@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Playfair+Display:wght@700&family=Roboto:wght@500&family=Montserrat:wght@500&display=swap');
 
 body {
-    background-color: #d5d9de !important; 
+    background-color: #d5d9de !important;
     font-family: 'Open Sans', sans-serif;
     color: #000000;
     margin: 0;
@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #5271FF;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .logo {
@@ -27,12 +27,17 @@ body {
     color: #FFFFFF;
 }
 
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    /* Espacio entre los botones */
+}
+
 .auth-buttons button {
     background-color: #82E800;
     border: none;
     color: #000000;
     padding: 10px 20px;
-    margin-left: 10px;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
 }
@@ -80,11 +85,13 @@ h1 {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 160px;
-    border-radius: 4px; /* Añadido para bordes redondeados */
-    padding: 10px 0; /* Añadido para separar los elementos del borde */
+    border-radius: 4px;
+    /* Añadido para bordes redondeados */
+    padding: 10px 0;
+    /* Añadido para separar los elementos del borde */
 }
 
 .main-nav .dropdown:hover .dropdown-content {
@@ -100,7 +107,8 @@ h1 {
 
 .main-nav .dropdown-content a:hover {
     background-color: #f1f1f1;
-    border-radius: 4px; /* Añadido para bordes redondeados en los elementos */
+    border-radius: 4px;
+    /* Añadido para bordes redondeados en los elementos */
 }
 
 /* Opcional: Cambiar el color del enlace en el menú desplegable */
@@ -121,6 +129,32 @@ h1 {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+/* static/css/styles.css */
+.image-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100px;
+    /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.logo-container .text {
+    font-size: 24px;
+    /* Ajusta el tamaño del texto según sea necesario */
+    font-weight: bold;
 }

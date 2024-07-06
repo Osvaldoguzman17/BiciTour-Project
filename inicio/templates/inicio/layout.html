@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block titulo%}{%endblock%}</title>
+    <title>{% block titulo %}{% endblock %}</title>
     {% load static %}
 
     <link rel="stylesheet" href="{% static 'inicio/css/style.css' %}" type="text/css">
@@ -13,14 +13,19 @@
 <body>
     <header>
         <nav class="top-nav">
-            <div class="logo">Logo</div>
-            <div class="auth-buttons">
-                <a href="{% url 'Login' %}">
-                    <button class="login">Inicio de Sesión</button>
-                </a>
-                <a href="{% url 'Registrar' %}">
-                    <button class="register">Registrarse</button>
-                </a>
+            <div class="image-text-container">
+                <div class="logo-container">
+                    <img src="{% static 'inicio/images/bici.jpeg' %}" alt="Bici">
+                    <div class="text">BiciTour</div>
+                </div>
+                <div class="auth-buttons">
+                    <a href="{% url 'Login' %}">
+                        <button class="login">Inicio de Sesión</button>
+                    </a>
+                    <a href="{% url 'Registrar' %}">
+                        <button class="register">Registrarse</button>
+                    </a>
+                </div>
             </div>
         </nav>
         <nav class="main-nav">
@@ -45,11 +50,11 @@
         </nav>
     </header>
     <main>
-        {%block contenido%}
-
+        {% block contenido %}
         {% endblock %}
     </main>
 
+    
     <script src="{% static 'inicio/js/script.js' %}"></script>
 </body>
 </html>
