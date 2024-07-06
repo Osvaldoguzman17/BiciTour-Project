@@ -2,7 +2,6 @@
 
 from django.db import migrations, models
 
-
 class Migration(migrations.Migration):
 
     initial = True
@@ -26,5 +25,15 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'registroUsuarios',
                 'ordering': ['-created'],
             },
+        ),
+        migrations.CreateModel(
+            name='Ruta',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('nombre', models.CharField(max_length=100)),
+                ('descripcion', models.TextField()),
+                ('duracion', models.DurationField()),
+                ('distancia', models.FloatField()),
+            ],
         ),
     ]
