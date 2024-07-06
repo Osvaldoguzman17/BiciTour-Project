@@ -1,8 +1,5 @@
-# views.py
-
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Ruta, RutaRealizada
-from .forms import registroUsuarioForm
 from django.contrib.auth.models import User  # Asegúrate de importar User
 
 def principal(request):
@@ -12,14 +9,7 @@ def login(request):
     return render(request, "inicio/login.html")
 
 def registrar(request):
-    if request.method == 'POST':
-        form = registroUsuarioForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('Principal')  # Redirigir a la página principal u otra página después de registrarse
-    else:
-        form = registroUsuarioForm()
-    return render(request, 'inicio/registrar.html', {'form': form})
+    return render(request, "inicio/registrar.html")
 
 def nueva_contraseña(request):
     return render(request, "inicio/nueva_contraseña.html")
@@ -54,6 +44,14 @@ def search(request):
 def ruta_detail(request, ruta_id):
     ruta = get_object_or_404(Ruta, id=ruta_id)
     return render(request, 'inicio/ruta_detail.html', {'ruta': ruta})
+
+# views.py
+from django.shortcuts import redirect, get_object_or_404
+from .models import Ruta, RutaRealizada
+
+# views.py
+from django.shortcuts import redirect, get_object_or_404
+from .models import Ruta, RutaRealizada
 
 def marcar_ruta_realizada(request, ruta_id):
     ruta = get_object_or_404(Ruta, id=ruta_id)
