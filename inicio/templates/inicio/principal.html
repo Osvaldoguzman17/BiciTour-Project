@@ -4,7 +4,29 @@
 {%block titulo%}Principal {%endblock%}
 
 {%block contenido%}
-
-<h3>Pagina Princiapal</h3>
+{% load static %}
+<div class="container my-4 custom-container">
+    <h2 class="mb-4">Recomendados</h2>
+    <div class="row">
+       
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                   
+                    <div class="card-body">
+                        <img src="{% static 'inicio/images/lugar.jpg' %}" class="card-img-top ruta-imagen">
+                        <h5 class="card-title">Tour Oaxaca</h5>
+                        <p class="card-text">
+                            <strong>Descripción:</strong> Paseo Por Oaxaca<br>
+                            <strong>Duración:</strong> 3 Horas<br>
+                            <strong>Fecha:</strong> 21/Septiembre/2025
+                        </p>
+                        <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        
+                    </div>
+                </div>
+            </div>
+     
+    </div>
+</div>
 
 {% endblock %}

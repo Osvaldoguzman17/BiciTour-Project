@@ -1,0 +1,31 @@
+<!-- templates/inicio/ruta_detail.html -->
+{% extends "inicio/layout.html" %}
+
+{% block titulo %}Detalles de la Ruta{% endblock %}
+
+{% block contenido %}
+<div class="form-container">
+    <div class="card">
+        <h3>{{ ruta.nombre }}</h3>
+        <!-- Mostrar imagen de la ruta -->
+        {% if ruta.imagen %}
+            <img src="{{ ruta.imagen.url }}" alt="{{ ruta.nombre }}" class="ruta-imagen">
+        {% else %}
+            <p>No hay imagen disponible para esta ruta.</p>
+        {% endif %}
+        <p><strong>Descripción:</strong> {{ ruta.descripcion }}</p>
+        <p><strong>Duración:</strong> {{ ruta.duracion }}</p>
+        <p><strong>Distancia:</strong> {{ ruta.distancia }} km</p>
+        <p><strong>Estatus:</strong> Activa</p>
+        <p><strong>Precio:</strong> 250$</p>
+        <p><strong>Estado:</strong> Michoacan</p>
+        <p><strong>Ciudad:</strong> Morelia</p>
+        <p><strong>Dificultad:</strong> Media</p>
+
+        <div class="d-flex justify-content-between mt-4">
+            <a href="#" class="btn btn-primary">Inscribirse</a>
+            <a href="#" class="btn btn-secondary">Lista de Participantes</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

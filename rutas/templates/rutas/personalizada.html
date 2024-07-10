@@ -1,0 +1,23 @@
+<!-- recomendaciones_personalizadas.html -->
+{% extends 'inicio/layout.html' %}
+
+{% block titulo %}Recomendaciones Personalizadas{% endblock %}
+
+{% block contenido %}
+    <h1>Recomendaciones Personalizadas</h1>
+    
+    
+    <form method="GET" action="{% url 'Personalizados' %}">
+        <input type="text" name="query" placeholder="Buscar ruta..." value="{{ query }}" />
+        <button type="submit">Buscar</button>
+    </form>
+    
+    
+    <ul>
+        {% for ruta in recomendaciones %}
+            <li>{{ ruta.nombre }} - {{ ruta.descripcion }} - {{ ruta.distancia }} km</li>
+        {% empty %}
+            <li>No hay rutas disponibles.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

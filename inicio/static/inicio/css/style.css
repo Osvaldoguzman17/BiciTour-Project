@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Playfair+Display:wght@700&family=Roboto:wght@500&family=Montserrat:wght@500&display=swap');
 
 body {
-    background-color: #d5d9de !important;
+    background-color: #d5d9de !important; 
     font-family: 'Open Sans', sans-serif;
     color: #000000;
     margin: 0;
@@ -15,22 +15,60 @@ body {
 /* Navegación superior */
 .top-nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #5271FF;
-    padding: 15px 20px;
+    padding: 10px 20px;
+    justify-content: space-between; /* Distribuir los elementos */
 }
 
-.logo {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.logo-container .text {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     color: #FFFFFF;
 }
 
+/* Estilo para el formulario de búsqueda */
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.search-container form {
+    display: flex;
+    max-width: 400px;
+    width: 100%; /* Asegura que el formulario se ajuste al contenedor */
+}
+
+.search-container .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.search-container .btn-outline-success {
+    border: 1px solid #82E800;
+    color: #82E800;
+}
+
+.search-container .btn-outline-success:hover {
+    background-color: #82E800;
+    color: #ffffff;
+}
+
+/* Botones de autenticación */
 .auth-buttons {
     display: flex;
-    gap: 10px;
-    /* Espacio entre los botones */
+    gap: 10px; /* Espacio entre los botones */
 }
 
 .auth-buttons button {
@@ -50,12 +88,14 @@ body {
 .main-nav {
     background-color: #FFFFFF;
     padding: 10px 20px;
+    border-bottom: 1px solid #d1d1d1; /* Añadido para una línea de separación sutil */
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center; /* Alinea los elementos verticalmente */
     margin: 0;
     padding: 0;
 }
@@ -67,16 +107,6 @@ body {
     font-weight: 500;
 }
 
-main {
-    padding: 20px;
-    text-align: left;
-}
-
-h1 {
-    font-family: 'Playfair Display', serif;
-    color: #5271FF;
-}
-
 .main-nav .dropdown {
     position: relative;
 }
@@ -85,13 +115,11 @@ h1 {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     min-width: 160px;
-    border-radius: 4px;
-    /* Añadido para bordes redondeados */
-    padding: 10px 0;
-    /* Añadido para separar los elementos del borde */
+    border-radius: 4px; /* Añadido para bordes redondeados */
+    padding: 10px 0; /* Añadido para separar los elementos del borde */
 }
 
 .main-nav .dropdown:hover .dropdown-content {
@@ -107,8 +135,7 @@ h1 {
 
 .main-nav .dropdown-content a:hover {
     background-color: #f1f1f1;
-    border-radius: 4px;
-    /* Añadido para bordes redondeados en los elementos */
+    border-radius: 4px; /* Añadido para bordes redondeados en los elementos */
 }
 
 /* Opcional: Cambiar el color del enlace en el menú desplegable */
@@ -116,6 +143,11 @@ h1 {
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+}
+
+/* Ajustes para el contenido principal */
+form {
+    margin: 0;
 }
 
 .form-container {
@@ -129,32 +161,47 @@ h1 {
     width: 100%;
     max-width: 400px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
-/* static/css/styles.css */
-.image-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.card-img-top.ruta-imagen {
+    height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.ruta-imagen {
     width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container img {
-    max-width: 100px;
-    /* Ajusta el tamaño de la imagen según sea necesario */
-    margin-right: 10px;
-    /* Espacio entre la imagen y el texto */
-}
-
-.logo-container .text {
-    font-size: 24px;
-    /* Ajusta el tamaño del texto según sea necesario */
-    font-weight: bold;
+.custom-container {
+    max-width: 2000px; 
 }

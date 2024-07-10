@@ -1,0 +1,41 @@
+{% extends "inicio/layout.html" %}
+
+{% block titulo %}Inscripción{% endblock %}
+
+{% block contenido %}
+
+<h3 class="text-center">Inscríbete en <br>BiciTour</h3>
+
+
+<div class="form-container">
+    <div class="card">
+        <form class="form-horizontal" action="#" method="POST" role="form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Número de Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="ciudad" class="form-label">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="estado" class="form-label">Estado:</label>
+                <input type="text" id="estado" name="estado" class="form-control" required>
+            </div>
+            <div class="d-grid">
+                <input type="submit" value="Registrarse" class="btn btn-primary mb-3">
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

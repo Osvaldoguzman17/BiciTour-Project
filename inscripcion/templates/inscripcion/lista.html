@@ -1,0 +1,49 @@
+{% extends "inicio/layout.html" %}
+
+{%block titulo%}Lista {%endblock%}
+{%block Nombre%}Lista {%endblock%}
+{%block imagen%}
+    {%load static%}
+ {%static 'inicio/images/home.png'%}
+ {%endblock%}
+
+ {%block encabezado%} <div class="page-header">
+    <div class="page-title">
+        <h3>Lista de participantes</h3>
+       
+        
+    </div> 
+</div>{%endblock%}
+ 
+
+{%block contenido%}
+
+<h2>Lista de participantes</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo Electronico</th>
+            <th>Telefono</th>
+            <th>Ciudad</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="muted">
+                Daryl Mendoza
+            </td>
+            <td class="text-semibold">daryl1@gmail.com</td>
+            <td class="muted">4432273018</td>
+            <td class="muted">Morelia</td>
+            <td class="muted">Michoacan</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    
+
+{%endblock%}
