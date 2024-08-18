@@ -1,0 +1,36 @@
+{% extends "inicio/layout.html" %}
+
+{% load static %}
+
+{% block titulo %}
+Quien somos
+{% endblock %}
+
+{% block contenido %}
+<div class="card mx-auto my-4" style="max-width: 600px;">
+    <img src="{% static 'inicio/images/image.png' %}" class="card-img-top" alt="BiciTour Imagen" style="width: 50%; height: auto; margin: 0 auto; display: block;">
+
+    <div class="card-body text-center">
+        <h3 class="card-title">¿Quiénes somos?</h3>
+        <p class="card-text">
+            El proyecto "BiciTour" se enfoca en el desarrollo de un sistema web para organizar
+            recorridos en bicicleta a lo largo de México, principalmente en zonas turísticas. 
+            Este sistema permitirá a los usuarios consultar y preinscribirse en recorridos, 
+            mientras que el administrador podrá gestionar la información relacionada con 
+            dichos recorridos.
+        </p>
+    </div>
+
+    <div class="card-footer text-center">
+        <a href="https://www.facebook.com" target="_blank" class="text-decoration-none mx-2">
+            <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank" class="text-decoration-none mx-2">
+            <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-decoration-none mx-2">
+            <i class="fab fa-twitter fa-2x"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}
